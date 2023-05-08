@@ -1,0 +1,6 @@
+/* src/styles/layout.css */
+.layout {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 0 1.1rem 1.45rem;
+}
