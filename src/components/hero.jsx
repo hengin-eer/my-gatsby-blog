@@ -1,5 +1,6 @@
 // src/components/hero.js
 import React from "react"
+import PROFILE_IMG from "../../static/hengineer.png"
 import "../styles/hero.css"
 
 export default function Hero() {
@@ -10,7 +11,7 @@ export default function Hero() {
                 Enjoy lots of posts.<br />
             </h1>
             <div className="hero-author">
-                <img src="../../static/hengineer.png" className="hero-author-image" alt="avatar"></img>
+                <img src={PROFILE_IMG} className="hero-author-image" alt="avatar"></img>
                 <p className="hero-author-text">
                     Written by Hengineer.<br />
                     Front Engineer at Hoge.Inc. Love JavaScript.
