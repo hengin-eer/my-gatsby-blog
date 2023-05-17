@@ -1,4 +1,25 @@
 /* src/styles/header.css */
+header {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & .header-nav {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+
+        & li a {
+            font-family: 'Shippori Mincho';
+            color: var(--theme-200);
+            font-size: 1.5rem;
+        }
+    }
+}
+
 .logo-image{
-    width: 150px;
+    height: 80px;
 }
