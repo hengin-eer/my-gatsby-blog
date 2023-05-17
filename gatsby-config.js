@@ -14,7 +14,7 @@ module.exports = {
 	siteMetadata: {
 		title: "Hengineer.tech",
 		description: "Hengineerのポートフォリオ & ブログ",
-		author: "Engineer X"
+		author: "Hengineer"
 	},
 	/* Your site config here */
 	plugins: [
@@ -26,13 +26,15 @@ module.exports = {
 			}
 		},
 		{
-			resolve: `gatsby-transformer-remark`,
+			resolve: `gatsby-plugin-mdx`,
 			options: {
-				commonmark: true,
-				footnotes: true,
-				pedantic: true,
-				gfm: true,
-				plugins: [],
+				mdxOptions: {
+					remarkPlugins: [
+						// Add GitHub Flavored Markdown (GFM) support
+						// require(`remark-gfm`),
+						import(`remark-gfm`)
+					]
+				},
 			},
 		},
 		`gatsby-plugin-image`,

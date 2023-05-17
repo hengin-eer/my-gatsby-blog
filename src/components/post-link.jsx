@@ -7,7 +7,7 @@ import { Link } from "gatsby"
 export default function PostLink({ post }) {
 	const { title, updatedAt, eyecatch } = post;
 	const pageLink = `/post/${post.slug}/`
-	const body = post.markdown.childMarkdownRemark;
+	const body = post.markdown.childMdx;
 
 	return (
 		<Link to={pageLink} className="post-link-anchor">

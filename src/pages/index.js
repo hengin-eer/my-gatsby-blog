@@ -12,7 +12,7 @@ export default function Home({ data }) {
       <Seo title="Hengineer.tech" description="Hengineer's blog" />
       <Hero />
       {data.allContentfulBlog.edges.map(edge =>
-          <PostLink key={edge.node.slug} post={edge.node} />
+          <PostLink key={edge.node.contentKey} post={edge.node} />
         )}
     </Layout>
   )
@@ -25,15 +25,17 @@ query allContentfulBlog {
       node {
         title
         slug
-        createdAt(locale: "ja-JP", formatString: "YYYY/MM/DD")
+        contentKey
         updatedAt(locale: "ja-JP", formatString: "YYYY/MM/DD")
         eyecatch {
           url
           title
         }
         markdown {
-          childMarkdownRemark {
-            excerpt(format: PLAIN, pruneLength: 100)
+          childMdx {
+            body
+            excerpt(pruneLength: 100)
+            tableOfContents(maxDepth: 3)
           }
         }
       }
