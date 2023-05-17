@@ -1,0 +1,39 @@
+.follow {
+    margin: 1rem auto;
+    padding: 2rem 1rem;
+    border: 1px solid var(--theme-100);
+
+    & .follow-title {
+        text-align: center;
+        font-size: 1.4rem;
+        color: var(--theme-100);
+    }
+
+    & .follow-links {
+        padding: 0;
+        padding-top: 1rem;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 2rem;
+
+        & li a {
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            column-gap: 1rem;
+
+            & svg {
+                font-size: 1.5rem;
+                color: var(--theme-200);
+            }
+
+            & p {
+                font-size: .8rem;
+                color: var(--theme-100);
+            }
+        }
+    }
+}
