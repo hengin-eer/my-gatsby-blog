@@ -11,17 +11,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 					node {
 						title
 						slug
-						createdAt(locale: "ja-JP", formatString: "YYYY/MM/DD")
 						updatedAt(locale: "ja-JP", formatString: "YYYY/MM/DD")
 						eyecatch {
 							url
 							title
 						}
 						markdown {
-							childMarkdownRemark {
-								html
-								tableOfContents
-								excerpt(format: PLAIN, pruneLength: 100)
+							childMdx {
+								body
+								excerpt(pruneLength: 100)
+								tableOfContents(maxDepth: 3)
 							}
 						}
 					}
