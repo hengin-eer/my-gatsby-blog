@@ -25,7 +25,6 @@ module.exports = {
 				accessToken: process.env.GATSBY_CONTENTFUL_API_KEY
 			}
 		},
-		gatsby-plugin-image,
 		{
 			resolve: `gatsby-plugin-mdx`,
 			options: {
