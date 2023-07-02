@@ -1,5 +1,6 @@
 // src/pages/index.js
 import React from "react"
+import LOGO_IMG from "../../static/logo-bg-white.png"
 import Layout from "../components/layout"
 import Hero from "../components/hero"
 import PostLink from "../components/post-link"
@@ -9,7 +10,7 @@ import Seo from "../components/seo"
 export default function Home({ data }) {
   return (
     <Layout>
-      <Seo title="Hengineer.tech" description="Hengineer's blog" />
+      <Seo title="Hengineer.tech" description="Hengineer's blog" eyecatch={LOGO_IMG} type="website" />
       <Hero />
       {data.allContentfulBlog.edges.map(edge =>
           <PostLink key={edge.node.contentKey} post={edge.node} />
