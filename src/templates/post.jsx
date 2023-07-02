@@ -15,7 +15,7 @@ export default function Post({ pageContext }) {
 
 	return (
 		<Layout>
-			<Seo title={title} description={body.excerpt} />
+			<Seo title={title} description={body.excerpt} eyecatch={eyecatch.url} type="article" />
 			<div className="post-header">
 				<h1>{title}</h1>
 				<p className="post-date">{updatedAt}</p>
