@@ -35,6 +35,11 @@ module.exports = {
 						import(`remark-gfm`)
 					]
 				},
+				gatsbyRemarkPlugins: [
+					{
+						resolve: `gatsby-remark-line-breaks`
+					}
+				]
 			},
 		},
 		`gatsby-plugin-image`,
